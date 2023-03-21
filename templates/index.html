@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% load i18n static django_bootstrap5 %}
+
+{% block content %}
+<a href="{% url 'django_registration_register' %}">{% trans 'Register' %}</a>
+{% endblock %}

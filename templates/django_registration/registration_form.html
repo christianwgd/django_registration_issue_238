@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 i18n %}
+
+{% block page_title %}{% trans 'Register' %}{% endblock %}
+
+{% block content %}
+
+<form method="post" action="" novalidate>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <button class="btn btn-primary" name="submit" type="submit"
+        formnovalidate title="{% trans 'Register' %}">
+        Register
+    </button>
+    <a href="{% url 'home' %}" class="btn btn-secondary" role="button"
+        formnovalidate title="{% trans 'cancel' %}">
+        Cancel
+    </a>
+</form>
+
+{% endblock %}
